@@ -5,7 +5,8 @@ var enLang = {  "text" : "hithere",
                 "mistake" : "it's a mistake",
                 "adv" : "Here could be your advertisement"};
 
-var symbolArray = { 'KeyR' : '', }
+var symbolArray = { 'KeyR' : '',
+                    'KeyC' : ''};
 
 
 var btnUa = document.getElementById('btn-ua');
@@ -22,6 +23,7 @@ langChange(); //default language
 btnUa.addEventListener('click', langChange);
 btnEn.addEventListener('click', langChange);
 userInp.addEventListener('keypress', symbolGenerator);
+userInp.addEventListener('keydown', symbolDel);
 
 
 function langChange (e) {
@@ -44,10 +46,21 @@ function symbolGenerator (e) {
     var img = document.createElement('img');
     img.className = 'symbol-icon';
     console.log(e.code);
-    // console.log(e.keyCode);
-    // console.log(e);
-    img.src = "img/logo.png"
-
+    img.src = symbolArray[e.code];
     out.appendChild(img);
+    // console.log(e);
 }
+
+function symbolDel (e) {
+
+    // if (e.code == 'Backslash') {
+    // if (e.charCode == 0) {
+    //     console.log('backspace');
+    //     out.removeChild(out.lastChild);
+    // }
+
+    console.log(e);
+}
+
+
 
