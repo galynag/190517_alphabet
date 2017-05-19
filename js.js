@@ -1,4 +1,4 @@
-var uaLang = {  "text" : "Імена закодовані у вишиванку",
+var uaLang = {  "text" : "<p>Кожна літера - це вишитий символ, кожен символ - це потужний оберіг.</p><p>У нашому магазині ви маєте унікальну можливість підібрати та створити вишиванку до вашого смаку своїми руками.</p><p>Створи вишиванку власноруч.</p>",
                 "mistake" : "можна вводити тільки літери",
                 "adv" : "Тут може бути Ваша реклама",
                 "team-p" : "Наша команда",
@@ -59,7 +59,7 @@ var cont = document.getElementById('contacts');
 var mistake = document.getElementById('mistake');
 var adv = document.getElementById('adv');
 
-var forbiddenSymb = [49, 50, 51, 52, 53, 54, 55, 56];
+var forbiddenSymb = [44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 96, 32, 45, 92];
 var data = uaLang; //default ua
 langChange(); //default language
 
@@ -88,8 +88,9 @@ function langChange (e) {
 
 
 function symbolGenerator (e) {
-    for (var i = 49; i <= 60; i++) {
-        if (e.charCode == i) {
+    console.log(e);
+    for (var i = 0; i < forbiddenSymb.length; i++) {
+        if (e.charCode == forbiddenSymb[i]) {
             e.preventDefault();
             mistakeFn();
             return false;
