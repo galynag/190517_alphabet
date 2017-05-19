@@ -5,9 +5,13 @@
   font-size: 1em;
   font-family: sans-serif,Arial;
 }
+body {
+  background-image: url("img/background.jpg");
+}
 .wrapper {
   margin:auto;
   width: 80%;
+  background: #fff;
 }
 h1 {
   font-size: 2em;
