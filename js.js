@@ -89,9 +89,13 @@ function symbolGenerator (e) {
 }
 
 function symbolDel (e) {
+
+
     if (e.keyCode === 8) {
         out.lastChild.remove();
     }
+
+
 }
 
 
