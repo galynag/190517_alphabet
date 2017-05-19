@@ -1,12 +1,14 @@
 var uaLang = {  "text" : "Імена закодовані у вишиванку",
                 "mistake" : "можна вводити тільки літери",
                 "adv" : "Тут може бути Ваша реклама",
-                "team-p" : "Наша команда"
+                "team-p" : "Наша команда",
+                "contacts" : "Контакты"
 };
 var enLang = {  "text" : "hithere",
                 "mistake" : "it's a mistake",
                 "adv" : "Here could be your advertisement",
-                "team-p" : "Our team"
+                "team-p" : "Our team",
+                "contacts" : "Contacts"
 };
 
 
@@ -53,8 +55,11 @@ var text = document.getElementById('text1');
 var output = document.getElementById('out');
 
 var teamP = document.getElementById('team-p');
+var cont = document.getElementById('contacts');
 var mistake = document.getElementById('mistake');
 var adv = document.getElementById('adv');
+
+var forbiddenSymb = [49, 50, 51, 52, 53, 54, 55, 56];
 var data = uaLang; //default ua
 langChange(); //default language
 
@@ -80,7 +85,17 @@ function langChange (e) {
     teamP.innerHTML = data['team-p'];
 }
 
+
+
 function symbolGenerator (e) {
+    for (var i = 49; i <= 60; i++) {
+        if (e.charCode == i) {
+            e.preventDefault();
+            mistakeFn();
+            return false;
+        }
+    }
+
     var img = document.createElement('img');
     img.className = 'symbol-icon';
     console.log(e.code);
@@ -89,13 +104,16 @@ function symbolGenerator (e) {
 }
 
 function symbolDel (e) {
-
-
     if (e.keyCode === 8) {
         out.lastChild.remove();
     }
+}
 
-
+function mistakeFn () {
+    mistake.style.visibility = 'visible';
+    setTimeout(function () {
+        mistake.style.visibility = 'hidden';
+    }, 5000)
 }
 
 
