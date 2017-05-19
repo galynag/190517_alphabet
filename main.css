@@ -3,11 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+#wrapper {
+  margin: 0.5% auto;
+}
 header {
   border: 1px solid gray;
 }
 #logo {
-
+  width: 30%;
+  margin: auto;
+}
+#logo-img {
+  width: 100%;
 }
 #btn-language {
   float: right;
@@ -17,42 +24,65 @@ header::after {
   clear: both;
   display: block;
 }
-h1 {
+#text1 {
   text-align: center;
 }
-#text1 {
-
+#username-check {
+  width: 50%;
+  margin: auto;
 }
 #user-input {
-
+  width: 100%;
+  border: 1px solid gray;
 }
 #mistake {
-
+  width: 100%;
 }
 #out {
+  width: 50%;
+  margin: auto;
   border: 1px solid gray;
+}
+#symbol-icon {
+  content: "";
+  clear: both;
+  display: block;
+}
+#symbol-icon::after {
+  float:left;
 }
 #social {
+  width: 30%;
+  margin: auto;
   border: 1px solid gray;
 }
-#fb {
-
-}
-#inst {
-
-}
-#tw {
-  
+.social-network {
+  width: 32%;
 }
 #sample-images {
+  width: 50%;
+  margin: auto;
   border: 1px solid gray;
 }
+.sample-images-example {
+  width: 45%;
+}
 #adv {
+  width: 50%;
+  margin: auto;
+  border: 1px solid gray;
+}
+footer {
   border: 1px solid gray;
 }
 #team {
   float: left;
   border: 1px solid gray;
+  width: 30%;
+}
+.team-mate {
+  width: 32%;
+  margin: auto;
 }
 #contacts {
   float: right;
