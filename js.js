@@ -1,14 +1,16 @@
-var uaLang = {  "text" : "<h1>Імена закодовані у вишиванку.</h1><p>Кожна літера - це вишитий символ, кожен символ - це потужний оберіг.</p><p>У нашому магазині ви маєте унікальну можливість підібрати та створити вишиванку до вашого смаку своїми руками.</p><p>Створи вишиванку власноруч.</p>",
+var uaLang = {  "text" : "<h1>Імена закодовані у вишиванку</h1><p>Кожна літера - це вишитий символ, кожен символ - це потужний оберіг.</p><p>У нашому магазині ви маєте унікальну можливість підібрати та створити вишиванку до вашого смаку своїми руками.</p><p>Створи вишиванку власноруч.</p>",
+                // "message" : "си"
                 "mistake" : "можна вводити тільки літери",
                 "adv" : "Тут може бути Ваша реклама",
                 "team-p" : "Наша команда:",
-                "contacts" : "Контакти"
+                "contacts" : "Контакти:"
 };
-var enLang = {  "text" : "<h1>Names encoded in vyshyvanka.</h1><p>Each character is a symbol embroidered, every character is a powerful charm.</p><p>In our store you will have a unique opportunity to choose and decorate your vyshyvanka.</p><p>Create your own vyshyvanka now.</p>",
+var enLang = {  "text" : "<h1>Names encoded in vyshyvanka</h1><p>Each character is a symbol embroidered, every character is a powerful charm.</p><p>In our store you will have a unique opportunity to choose and decorate your vyshyvanka.</p><p>Create your own vyshyvanka now.</p>",
+                // "message" : ""
                 "mistake" : "you can type only alphabet symbols",
                 "adv" : "Here could be your advertisement",
                 "team-p" : "Our team:",
-                "contacts" : "Contacts"
+                "contacts" : "Contacts:"
 };
 
 
