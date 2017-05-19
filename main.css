@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 1em;
+  font-family: sans-serif,Arial;
 }
 .wrapper {
   margin:auto;
@@ -37,7 +38,8 @@ header button:hover {
 header button:focus {
   background: darkgray;
 }
-#logo {
+#logo-img {
+  display: block;
   width: 30%;
   margin: auto;
 }
