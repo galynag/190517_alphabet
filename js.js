@@ -72,7 +72,6 @@ btnUa.addEventListener('click', langChange);
 btnEn.addEventListener('click', langChange);
 userInp.addEventListener('keypress', symbolGenerator);
 userInp.addEventListener('keydown', symbolDel);
-// userInp.addEventListener('key', delAll);
 
 
 function langChange (e) {
@@ -95,7 +94,6 @@ function langChange (e) {
 
 
 function symbolGenerator (e) {
-    // console.log(e);
     for (var i = 0; i < forbiddenSymb.length; i++) {
         if (e.charCode == forbiddenSymb[i]) {
             e.preventDefault();
@@ -117,19 +115,8 @@ function symbolDel (e) {
             out.lastChild.remove();
         }
     }
-
-    // if (userInp.value.length == 0) {
-    //     console.log(e.keyCode);
-    //     if (e.keyCode == 8) {
-    //         out.innerHTML = "";
-    //     }
-    // }
 }
 
-function delAll (e) {
-
-
-    }
 function mistakeFn () {
     mistake.style.visibility = 'visible';
     setTimeout(function () {
