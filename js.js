@@ -2,10 +2,10 @@ var uaLang = {  "text" : "<h1>Імена закодовані у вишиван�
                 "mistake" : "можна вводити тільки літери",
                 "adv" : "Тут може бути Ваша реклама",
                 "team-p" : "Наша команда:",
-                "contacts" : "Контакты"
+                "contacts" : "Контакти"
 };
 var enLang = {  "text" : "<h1>Names encoded in vyshyvanka.</h1><p>Each character is a symbol embroidered, every character is a powerful charm.</p><p>In our store you will have a unique opportunity to choose and decorate your vyshyvanka.</p><p>Create your own vyshyvanka now.</p>",
-                "mistake" : "it's a mistake",
+                "mistake" : "you can type only alphabet symbols",
                 "adv" : "Here could be your advertisement",
                 "team-p" : "Our team:",
                 "contacts" : "Contacts"
@@ -58,6 +58,7 @@ var output = document.getElementById('out');
 var teamP = document.getElementById('team-p');
 var cont = document.getElementById('contacts');
 var mistake = document.getElementById('mistake');
+var contacts = document.getElementById('contacts');
 var adv = document.getElementById('adv');
 
 var forbiddenSymb = [44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 96, 45, 92, 13];
@@ -69,6 +70,7 @@ btnUa.addEventListener('click', langChange);
 btnEn.addEventListener('click', langChange);
 userInp.addEventListener('keypress', symbolGenerator);
 userInp.addEventListener('keydown', symbolDel);
+// userInp.addEventListener('key', delAll);
 
 
 function langChange (e) {
@@ -85,12 +87,13 @@ function langChange (e) {
     mistake.innerHTML = data['mistake'];
     adv.innerHTML = data['adv'];
     teamP.innerHTML = data['team-p'];
+    cont.innerHTML = data['contacts'];
 }
 
 
 
 function symbolGenerator (e) {
-    console.log(e);
+    // console.log(e);
     for (var i = 0; i < forbiddenSymb.length; i++) {
         if (e.charCode == forbiddenSymb[i]) {
             e.preventDefault();
@@ -101,21 +104,28 @@ function symbolGenerator (e) {
 
     var img = document.createElement('img');
     img.className = 'symbol-icon';
-    // console.log(e.code);
     img.src = symbolArray[e.code];
-    imgCodes.push(e.code);
+    // imgCodes.push(e.code);
     out.appendChild(img);
-
-    console.log(e);
 }
 
 function symbolDel (e) {
     if (e.keyCode === 8) {
-        console.log(userInp.value.length);
         out.lastChild.remove();
     }
+
+    // if (userInp.value.length == 0) {
+    //     console.log(e.keyCode);
+    //     if (e.keyCode == 8) {
+    //         out.innerHTML = "";
+    //     }
+    // }
 }
 
+function delAll (e) {
+
+
+    }
 function mistakeFn () {
     mistake.style.visibility = 'visible';
     setTimeout(function () {
