@@ -5,7 +5,11 @@ var enLang = {  "text" : "hithere",
                 "mistake" : "it's a mistake",
                 "adv" : "Here could be your advertisement"};
 
-var symbolArray = { 'KeyR' : '', }
+var symbolArray = {
+    'KeyR' : 'alphabet/k.png',
+    'KeyF' : 'alphabet/k.png',
+    'KeyA' : 'alphabet/a.png',
+}
 
 
 var btnUa = document.getElementById('btn-ua');
