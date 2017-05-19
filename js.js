@@ -56,7 +56,7 @@ var text = document.getElementById('text1');
 var output = document.getElementById('out');
 
 var teamP = document.getElementById('team-p');
-var cont = document.getElementById('contacts');
+var cont = document.getElementById('contacts-p');
 var mistake = document.getElementById('mistake');
 var contacts = document.getElementById('contacts');
 var adv = document.getElementById('adv');
@@ -111,7 +111,9 @@ function symbolGenerator (e) {
 
 function symbolDel (e) {
     if (e.keyCode === 8) {
-        out.lastChild.remove();
+        if (out.lastChild != null) {
+            out.lastChild.remove();
+        }
     }
 
     // if (userInp.value.length == 0) {
