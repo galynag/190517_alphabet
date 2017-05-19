@@ -2,14 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 1em;
+  font-family: sans-serif,Arial;
 }
 .wrapper {
   margin:auto;
   width: 80%;
 }
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 1em 0;
+}
+p {
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.7em 0;
+}
 p, h1 {
   text-align: center;
-  padding: 1em 0;
+}
+h2 {
+  font-size: 1.5em;
+  padding: 20px 10px;
 }
 header .wrapper{
   border-bottom: 1px solid grey;
@@ -23,7 +38,8 @@ header button:hover {
 header button:focus {
   background: darkgray;
 }
-#logo {
+#logo-img {
+  display: block;
   width: 30%;
   margin: auto;
 }
@@ -57,18 +73,23 @@ header::after {
 #symbol-icon {
   float:left;
 }
-#symbol-icon::after {
+#social-network::after {
   content: "";
   clear: both;
   display: block;
 }
+
+#social-network {
+  width: 14%;
+  margin: 20px auto;
+}
 .social-network {
   display: block;
   float: left;
-  width: 3%;
+  width: 30%;
   margin: auto;
 }
-div.social-network:after, fotter:after, #foot-wrap:after  {
+div.social-network:after, footer:after, #foot-wrap:after  {
   content: '';
   clear: both;
   display: block;
@@ -124,11 +145,12 @@ footer {
 .team-name {
   text-align: center;
   background-color: black;
-
 }
 #contacts {
   float: right;
-
   width: 20%;
   background-color: black;
+}
+.contacts-icon {
+  display: table;
 }
