@@ -44,12 +44,12 @@ header::after {
   border: 1px solid gray;
 }
 #symbol-icon {
+  float:left;
+}
+#symbol-icon::after {
   content: "";
   clear: both;
   display: block;
-}
-#symbol-icon::after {
-  float:left;
 }
 #social {
   width: 30%;
@@ -65,7 +65,7 @@ header::after {
   border: 1px solid gray;
 }
 .sample-images-example {
-  width: 45%;
+  width: 49%;
 }
 #adv {
   width: 50%;
@@ -80,8 +80,13 @@ footer {
   border: 1px solid gray;
   width: 30%;
 }
-.team-mate {
+.team-info {
+  float: left;
   width: 32%;
+  margin: auto;
+}
+.team-mate {
+  width: 100%;
   margin: auto;
 }
 #contacts {
