@@ -87,7 +87,7 @@ header::after {
   width: 30%;
   margin: auto;
 }
-div.social-network:after, fotter:after, #foot-wrap:after  {
+div.social-network:after, footer:after, #foot-wrap:after  {
   content: '';
   clear: both;
   display: block;
@@ -143,11 +143,12 @@ footer {
 .team-name {
   text-align: center;
   background-color: black;
-
 }
 #contacts {
   float: right;
-
   width: 20%;
   background-color: black;
+}
+.contacts-icon {
+  display: table;
 }
