@@ -5,11 +5,14 @@ var enLang = {  "text" : "hithere",
                 "mistake" : "it's a mistake",
                 "adv" : "Here could be your advertisement"};
 
+var symbolArray = { 'KeyR' : '', }
+
 
 var btnUa = document.getElementById('btn-ua');
 var btnEn = document.getElementById('btn-eng');
 var userInp = document.getElementById('user-input');
 var text = document.getElementById('text1');
+var output = document.getElementById('out');
 
 var mistake = document.getElementById('mistake');
 var adv = document.getElementById('adv');
@@ -18,6 +21,7 @@ langChange(); //default language
 
 btnUa.addEventListener('click', langChange);
 btnEn.addEventListener('click', langChange);
+userInp.addEventListener('keypress', symbolGenerator);
 
 
 function langChange (e) {
@@ -35,3 +39,15 @@ function langChange (e) {
     mistake.innerHTML = data['mistake'];
     adv.innerHTML = data['adv'];
 }
+
+function symbolGenerator (e) {
+    var img = document.createElement('img');
+    img.className = 'symbol-icon';
+    console.log(e.code);
+    // console.log(e.keyCode);
+    // console.log(e);
+    img.src = "img/logo.png"
+
+    out.appendChild(img);
+}
+
