@@ -17,14 +17,15 @@ header::after {
   clear: both;
   display: block;
 }
-h1 {
+#text1 {
   text-align: center;
 }
-#text1 {
-
+#username-check {
+  
 }
 #user-input {
-
+  width: 50%;
+  margin: 10%;
 }
 #mistake {
 
@@ -42,7 +43,7 @@ h1 {
 
 }
 #tw {
-  
+
 }
 #sample-images {
   border: 1px solid gray;
