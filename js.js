@@ -69,7 +69,6 @@ function langChange (e) {
             data = uaLang;
         }
     }
-    // console.log(data['text']);
     text.innerHTML = data['text'];
     mistake.innerHTML = data['mistake'];
     adv.innerHTML = data['adv'];
@@ -81,18 +80,12 @@ function symbolGenerator (e) {
     console.log(e.code);
     img.src = symbolArray[e.code];
     out.appendChild(img);
-    // console.log(e);
 }
 
 function symbolDel (e) {
-
-    // if (e.code == 'Backslash') {
-    // if (e.charCode == 0) {
-    //     console.log('backspace');
-    //     out.removeChild(out.lastChild);
-    // }
-
-    console.log(e);
+    if (e.keyCode === 8) {
+        out.lastChild.remove();
+    }
 }
 
 
