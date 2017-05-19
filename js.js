@@ -1,9 +1,13 @@
-var uaLang = {  "text" : "zdarova",
-                "mistake" : "oshibochka vishla",
-                "adv" : "zdes' mogla by byt' vasha reklama"};
+var uaLang = {  "text" : "Імена закодовані у вишиванку",
+                "mistake" : "можна вводити тільки літери",
+                "adv" : "Тут може бути Ваша реклама",
+                "team-p" : "Наша команда"
+};
 var enLang = {  "text" : "hithere",
                 "mistake" : "it's a mistake",
-                "adv" : "Here could be your advertisement"};
+                "adv" : "Here could be your advertisement",
+                "team-p" : "Our team"
+};
 
 
 var symbolArray = {
@@ -48,6 +52,7 @@ var userInp = document.getElementById('user-input');
 var text = document.getElementById('text1');
 var output = document.getElementById('out');
 
+var teamP = document.getElementById('team-p');
 var mistake = document.getElementById('mistake');
 var adv = document.getElementById('adv');
 var data = uaLang; //default ua
@@ -72,6 +77,7 @@ function langChange (e) {
     text.innerHTML = data['text'];
     mistake.innerHTML = data['mistake'];
     adv.innerHTML = data['adv'];
+    teamP.innerHTML = data['team-p'];
 }
 
 function symbolGenerator (e) {
