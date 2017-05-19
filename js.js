@@ -1,13 +1,13 @@
-var uaLang = {  "text" : "<p>Кожна літера - це вишитий символ, кожен символ - це потужний оберіг.</p><p>У нашому магазині ви маєте унікальну можливість підібрати та створити вишиванку до вашого смаку своїми руками.</p><p>Створи вишиванку власноруч.</p>",
+var uaLang = {  "text" : "<h1>Імена закодовані у вишиванку.</h1><p>Кожна літера - це вишитий символ, кожен символ - це потужний оберіг.</p><p>У нашому магазині ви маєте унікальну можливість підібрати та створити вишиванку до вашого смаку своїми руками.</p><p>Створи вишиванку власноруч.</p>",
                 "mistake" : "можна вводити тільки літери",
                 "adv" : "Тут може бути Ваша реклама",
-                "team-p" : "Наша команда",
+                "team-p" : "Наша команда:",
                 "contacts" : "Контакты"
 };
-var enLang = {  "text" : "hithere",
+var enLang = {  "text" : "<h1>Names encoded in vyshyvanka.</h1><p>Each character is a symbol embroidered, every character is a powerful charm.</p><p>In our store you will have a unique opportunity to choose and decorate your vyshyvanka.</p><p>Create your own vyshyvanka now.</p>",
                 "mistake" : "it's a mistake",
                 "adv" : "Here could be your advertisement",
-                "team-p" : "Our team",
+                "team-p" : "Our team:",
                 "contacts" : "Contacts"
 };
 
@@ -44,7 +44,8 @@ var symbolArray = {
     'KeyN' : 'alphabet/t.png',
     'KeyM' : 'alphabet/myak_znak.png',
     'Comma' : 'alphabet/b.png',
-    'Period' : 'yu'
+    'Period' : 'yu',
+    'Space' : 'alphabet/space.png'
 }
 
 
@@ -59,7 +60,8 @@ var cont = document.getElementById('contacts');
 var mistake = document.getElementById('mistake');
 var adv = document.getElementById('adv');
 
-var forbiddenSymb = [44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 96, 32, 45, 92];
+var forbiddenSymb = [44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 96, 45, 92, 13];
+var imgCodes = [];
 var data = uaLang; //default ua
 langChange(); //default language
 
@@ -99,13 +101,17 @@ function symbolGenerator (e) {
 
     var img = document.createElement('img');
     img.className = 'symbol-icon';
-    console.log(e.code);
+    // console.log(e.code);
     img.src = symbolArray[e.code];
+    imgCodes.push(e.code);
     out.appendChild(img);
+
+    console.log(e);
 }
 
 function symbolDel (e) {
     if (e.keyCode === 8) {
+        console.log(userInp.value.length);
         out.lastChild.remove();
     }
 }
