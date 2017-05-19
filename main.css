@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  border: 1px solid gray;
+}
+#logo {
+
+}
+#btn-language {
+  float: right;
+}
+header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+h1 {
+  text-align: center;
+}
+#text1 {
+
+}
+#user-input {
+
+}
+#mistake {
+
+}
+#out {
+  border: 1px solid gray;
+}
+#social {
+  border: 1px solid gray;
+}
+#fb {
+
+}
+#inst {
+
+}
+#tw {
+  
+}
+#sample-images {
+  border: 1px solid gray;
+}
+#adv {
+  border: 1px solid gray;
+}
+#team {
+  float: left;
+  border: 1px solid gray;
+}
+#contacts {
+  float: right;
+  border: 1px solid gray;
+}
