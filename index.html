@@ -2,29 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>Title</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div id="wrapper">
-    <header>
+  <header>
+      <div class="wrapper">
+          <div id="btn-language">
+              <button id="btn-eng">ENG</button>
+              <button id="btn-ua">UKR</button>
+          </div>
       <div id="logo">
         <img id="logo-img" src="img/logo.png" alt="our logo">
       </div>
-      <div id="btn-language">
-        <button id="btn-eng">ENG</button>
-        <button id="btn-ua">UKR</button>
+
       </div>
     </header>
     <div id="main">
+        <div class="wrapper">
       <h1 id="text1">H1</h1>
 
       <div id="username-check">
-        <input id="user-input" type="text" name="" placeholder="Введіть своє ім'я">
+        <input id="user-input" type="text" name="" placeholder="Введіть своє ім'я" autofocus>
         <p id="mistake"></p>
       </div>
       <div id="out"></div>
-      <div id="social">
+      <div social-network>
         <img class="social-network" src="img/social-fb.png" alt="!">
         <img class="social-network" src="img/social-insta.png" alt="!">
         <img class="social-network" src="img/social-tv.png" alt="!">
@@ -34,22 +38,23 @@
         <img class="sample-images-example" src="img/example2.jpg" alt="!">
       </div>
       <div id="adv">ADV BLOCK</div>
+        </div>
     </div>
     <footer>
       <div id="foot-wrap">
         <div id="team">
-          <p id="team-p">Our team</p>
+          <h2 id="team-p">Our team</h2>
           <div class="team-info">
             <img class="team-mate" src="img/galyna.jpeg" alt="!">
-            <div id="team-name">Galyna<br>Gavrina</div>
+            <div class="team-name">Galyna<br>Gavrina</div>
           </div>
           <div class="team-info">
             <img class="team-mate" src="img/george.jpeg" alt="!">
-            <div id="team-name">George<br>Bakhtarov</div>
+            <div class="team-name">George<br>Bakhtarov</div>
           </div>
           <div class="team-info">
             <img class="team-mate" src="img/ksenya.png" alt="!">
-            <div id="team-name">Ksenya<br>Kosachenko</div>
+            <div class="team-name">Ksenya<br>Kosachenko</div>
           </div>
         </div>
         <div id="contacts">CONTACTS</div>

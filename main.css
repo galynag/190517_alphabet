@@ -3,18 +3,29 @@
   padding: 0;
   box-sizing: border-box;
 }
-#wrapper {
-  margin: 0.5% auto;
+.wrapper {
+  margin:auto;
+  width: 80%;
 }
-header {
-  border: 1px solid gray;
+p, h1 {
+  text-align: center;
+  padding: 1em 0;
+}
+header .wrapper{
+  border-bottom: 1px solid grey;
+}
+header button {
+  padding: 0.2em;
+}
+header button:hover {
+  background: darkgray;
+}
+header button:focus {
+  background: darkgray;
 }
 #logo {
   width: 30%;
   margin: auto;
-}
-#logo-img {
-  width: 100%;
 }
 #btn-language {
   float: right;
@@ -24,24 +35,24 @@ header::after {
   clear: both;
   display: block;
 }
-#text1 {
-  text-align: center;
-}
+
 #username-check {
   width: 50%;
   margin: auto;
 }
 #user-input {
   width: 100%;
-  border: 1px solid gray;
+  padding: 1em 2em;
+  text-align: center;
 }
 #mistake {
   width: 100%;
+  margin: auto;
+  visibility: hidden;
 }
 #out {
-  width: 50%;
+  width: 100%;
   margin: auto;
-  border: 1px solid gray;
 }
 #symbol-icon {
   float:left;
@@ -51,32 +62,39 @@ header::after {
   clear: both;
   display: block;
 }
-#social {
-  width: 30%;
-  margin: auto;
-  border: 1px solid gray;
-}
 .social-network {
-  width: 32%;
+  display: block;
+  float: left;
+  width: 3%;
+  margin: auto;
+}
+div.social-network:after, fotter:after, #foot-wrap:after  {
+  content: '';
+  clear: both;
+  display: block;
 }
 #sample-images {
   width: 50%;
   margin: auto;
-  border: 1px solid gray;
-}
+ }
 .sample-images-example {
   width: 49%;
 }
 #adv {
-  width: 50%;
+  width: 100%;
+  height: 10em;
   margin: auto;
-  border: 1px solid gray;
+  text-align: center;
+  line-height: 10em;
+  vertical-align: middle;
+  font-size: 20px;
+  color: grey;
 }
 footer {
-  border: 1px solid gray;
   background-color: black;
   color: white;
 }
+
 #foot-wrap {
   width: 80%;
   margin: auto;
@@ -84,13 +102,16 @@ footer {
 }
 #team {
   float: left;
-  border: 1px solid gray;
   width: 80%;
+  text-align: left;
   background-color: black;
+}
+#team-p{
+  text-align: left;
 }
 .team-info {
   float: left;
-  width: 33%;
+  width: 15%;
   margin: auto;
   background-color: black;
 }
@@ -103,10 +124,11 @@ footer {
 .team-name {
   text-align: center;
   background-color: black;
+
 }
 #contacts {
   float: right;
-  border: 1px solid gray;
+
   width: 20%;
   background-color: black;
 }
