@@ -49,7 +49,41 @@ var symbolArray = {
     'Period' : 'yu',
     'Space' : 'alphabet/space.png'
 }
-
+var symbolArray2 = {
+    'й' : 'alphabet/y.png',
+    'ц' : 'alphabet/ts.png',
+    'у' : 'alphabet/u.png',
+    'к' : 'alphabet/k.png',
+    'е' : 'alphabet/e.png',
+    'н' : 'alphabet/n.png',
+    'г' : 'alphabet/g.png',
+    'ш' : 'alphabet/sh.png',
+    'щ' : 'alphabet/shch.png',
+    'з' : 'alphabet/z.png',
+    'х' : 'alphabet/kh.png',
+    'ї' : 'alphabet/yi.png',
+    'ф' : 'alphabet/f.png',
+    'і' : 'alphabet/yy.png',
+    'в' : 'alphabet/apostroph.png',
+    'а' : 'alphabet/a.png',
+    'п' : 'alphabet/p.png',
+    'р' : 'alphabet/r.png',
+    'о' : 'alphabet/o.png',
+    'л' : 'alphabet/L.png',
+    'д' : 'alphabet/d.png',
+    'ж' : 'alphabet/zh.png',
+    'є' : 'alphabet/ie.png',
+    'я' : 'alphabet/ya.png',
+    'ч' : 'alphabet/ch.png',
+    'с' : 'alphabet/c.png',
+    'м' : 'alphabet/m.png',
+    'и' : 'alphabet/yy.png',
+    'т' : 'alphabet/t.png',
+    'ь' : 'alphabet/myak_znak.png',
+    'б' : 'alphabet/b.png',
+    'ю' : 'yu',
+    ' ' : 'alphabet/space.png'
+}
 
 var btnUa = document.getElementById('btn-ua');
 var btnEn = document.getElementById('btn-eng');
@@ -70,8 +104,8 @@ langChange(); //default language
 
 btnUa.addEventListener('click', langChange);
 btnEn.addEventListener('click', langChange);
-userInp.addEventListener('keypress', symbolGenerator);
-userInp.addEventListener('keydown', symbolDel);
+// userInp.addEventListener('keypress', symbolGenerator);
+// userInp.addEventListener('keydown', symbolDel);
 
 
 function langChange (e) {
@@ -90,25 +124,45 @@ function langChange (e) {
     teamP.innerHTML = data['team-p'];
     cont.innerHTML = data['contacts'];
 }
+    var inputValueMas=[];
+  userInp.oninput = function(e) {
+    console.log(e);
+    // document.getElementById('out').innerHTML = userInp.value;
+
+        // for (var i = 0; i < forbiddenSymb.length; i++) {
+        //     if (e.charCode == forbiddenSymb[i]) {
+        //         e.preventDefault();
+        //         mistakeFn();
+        //         return false;
+        //     }
+        // }
+        var outStr='';
+        inputValueMas=userInp.value.split('');
+        console.log(inputValueMas);
+        for (var i=0; i<inputValueMas.length; i++) {
+        outStr +='  <img class="symbol-icon" src="'+symbolArray2[inputValueMas[i]]+'">';
+      }
+      out.innerHTML= outStr;
+  };
 
 
-
-function symbolGenerator (e) {
-    for (var i = 0; i < forbiddenSymb.length; i++) {
-        if (e.charCode == forbiddenSymb[i]) {
-            e.preventDefault();
-            mistakeFn();
-            return false;
-        }
-    }
-
-    var img = document.createElement('img');
-    img.className = 'symbol-icon';
-    img.src = symbolArray[e.code];
-    // imgCodes.push(e.code);
-    out.appendChild(img);
-}
-
+// function symbolGenerator (e) {
+//   console.log(e);
+//     for (var i = 0; i < forbiddenSymb.length; i++) {
+//         if (e.charCode == forbiddenSymb[i]) {
+//             e.preventDefault();
+//             mistakeFn();
+//             return false;
+//         }
+//     }
+//
+//     var img = document.createElement('img');
+//     img.className = 'symbol-icon';
+//     img.src = symbolArray[e.code];
+//     // imgCodes.push(e.code);
+//     out.appendChild(img);
+// }
+//
 function symbolDel (e) {
     if (e.keyCode === 8) {
         if (out.lastChild != null) {
@@ -123,6 +177,3 @@ function mistakeFn () {
         mistake.style.visibility = 'hidden';
     }, 5000)
 }
-
-
-
